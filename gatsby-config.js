@@ -4,6 +4,14 @@ module.exports = {
     desc: "Mackenzie's new blog!"
   },
   plugins: [
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "bbokvuhycv25",
+        accessToken:
+          "0d3945893e51c676933c079c7c0ee39c5178098bef5f72b2dfa6b760e6090c0d"
+      }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
@@ -27,15 +35,9 @@ module.exports = {
         path: `${__dirname}/static/assets`
       }
     },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        excerpt_separator: `<!-- end -->`
-      }
-    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-netlify-cms"
+    "gatsby-transformer-remark"
   ]
 };
 
